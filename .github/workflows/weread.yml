@@ -1,9 +1,10 @@
 name: weread sync
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 1 * * *"  # 每天北京时间早上9点运行
+  workflow_dispatch:
+
 jobs:
   sync:
     name: Sync
